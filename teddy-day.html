@@ -7,29 +7,105 @@
     <title>Teddy Day | 7 Days of Love</title>
     <link rel="stylesheet" href="style.css">
     <link
-        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
 </head>
 
-<body class="wait-theme">
+<body class="teddy-theme">
+    <div class="teddy-bg-anim">
+        <div class="t-heart h1">❤</div>
+        <div class="t-heart h2">❤</div>
+        <div class="t-heart h3">❤</div>
+        <div class="t-heart h4">❤</div>
+        <div class="t-heart h5">❤</div>
+        <div class="t-heart h6">❤</div>
+        <div class="t-bear b1">🧸</div>
+        <div class="t-bear b2">🧸</div>
+        <div class="t-bear b3">🧸</div>
+        <div class="t-bear b4">🧸</div>
+    </div>
+
     <div class="container">
         <header>
             <nav>
-                <div class="logo"><a href="index.html">Valentine Week</a></div>
+                <div class="logo"><a href="index.html" style="color: #d81b60;">Valentine Week</a></div>
             </nav>
         </header>
 
         <main>
-            <div class="wait-card glass-effect">
-                <div class="wait-icon">🧸</div>
-                <h1 class="wait-title">Teddy Day</h1>
-                <p class="wait-message">Wait for the day my love</p>
-                <a href="index.html" class="btn primary-btn">Back to Home</a>
+            <div class="card glass-effect teddy-card">
+                <h1 class="fade-in title-font">Happy Teddy Day</h1>
+
+                <div class="visual-container fade-in delay-1">
+                    <div class="teddy-visual">
+                        <!-- Custom Teddy Bear SVG -->
+                        <svg class="teddy-svg" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Ears -->
+                            <circle class="teddy-body" cx="50" cy="50" r="25" />
+                            <circle class="teddy-ear-inner" cx="50" cy="50" r="15" />
+                            <circle class="teddy-body" cx="150" cy="50" r="25" />
+                            <circle class="teddy-ear-inner" cx="150" cy="50" r="15" />
+
+                            <!-- Head -->
+                            <circle class="teddy-body" cx="100" cy="80" r="60" />
+
+                            <!-- Snout -->
+                            <ellipse class="teddy-snout" cx="100" cy="95" rx="25" ry="20" />
+                            <ellipse class="teddy-nose" cx="100" cy="90" rx="10" ry="7" />
+
+                            <!-- Mouth -->
+                            <path class="teddy-nose" d="M100,97 L100,108 M90,108 Q100,115 110,108" fill="none"
+                                stroke="#5d4037" stroke-width="2" stroke-linecap="round" />
+
+                            <!-- Eyes -->
+                            <circle class="teddy-eye" cx="75" cy="75" r="6" />
+                            <circle class="teddy-eye-shine" cx="77" cy="73" r="2" />
+                            <circle class="teddy-eye" cx="125" cy="75" r="6" />
+                            <circle class="teddy-eye-shine" cx="127" cy="73" r="2" />
+
+                            <!-- Blush -->
+                            <ellipse class="teddy-blush" cx="60" cy="95" rx="8" ry="4" />
+                            <ellipse class="teddy-blush" cx="140" cy="95" rx="8" ry="4" />
+
+                            <!-- Body -->
+                            <ellipse class="teddy-body" cx="100" cy="170" rx="55" ry="65" />
+                            <ellipse class="teddy-belly" cx="100" cy="170" rx="35" ry="45" />
+
+                            <!-- Arms -->
+                            <g class="teddy-wave">
+                                <ellipse class="teddy-body" cx="45" cy="150" rx="20" ry="40"
+                                    transform="rotate(30 45 150)" />
+                            </g>
+                            <ellipse class="teddy-body" cx="155" cy="150" rx="20" ry="40"
+                                transform="rotate(-30 155 150)" />
+
+                            <!-- Legs -->
+                            <ellipse class="teddy-body" cx="65" cy="210" rx="22" ry="30" />
+                            <ellipse class="teddy-body" cx="135" cy="210" rx="22" ry="30" />
+                            <circle class="teddy-ear-inner" cx="65" cy="215" r="12" />
+                            <circle class="teddy-ear-inner" cx="135" cy="215" r="12" />
+
+                            <!-- Holding Heart -->
+                            <path class="teddy-heart" d="M100,190 C60,140 30,160 100,230 C170,160 140,140 100,190"
+                                transform="translate(0, -50) scale(0.6) translate(65, 100)" />
+                        </svg>
+                    </div>
+                </div>
+
+                <p class="quote fade-in delay-2">A little teddy for my favorite person,<br>
+                    sent with love just for you.<br>
+                    When you see it, think of me, <br>
+                    because you make my world softer and happier 🧸🤍"</p>
+
+                <div class="nav-buttons fade-in delay-3">
+                    <a href="index.html" class="btn secondary-btn">Home</a>
+                    <a href="promise-day.html" class="btn primary-btn">Next: Promise Day &rarr;</a>
+                </div>
             </div>
         </main>
 
         <footer>
-            <p>Made with &hearts; for you</p>
+            <p style="color: #880e4f;">Made with &hearts; for Mehezabin</p>
         </footer>
     </div>
 </body>
