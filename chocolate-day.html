@@ -7,29 +7,96 @@
     <title>Chocolate Day | 7 Days of Love</title>
     <link rel="stylesheet" href="style.css">
     <link
-        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
 </head>
 
-<body class="wait-theme">
+<body class="chocolate-theme">
+    <div class="chocolate-rain">
+        <div class="choco-piece round c1"></div>
+        <div class="choco-piece heart c2"></div>
+        <div class="choco-piece round c3"></div>
+        <div class="choco-piece heart c4"></div>
+        <div class="choco-piece round c5"></div>
+        <div class="choco-piece heart c6"></div>
+        <div class="choco-piece round c7"></div>
+        <div class="choco-piece heart c8"></div>
+    </div>
+
     <div class="container">
         <header>
             <nav>
-                <div class="logo"><a href="index.html">Valentine Week</a></div>
+                <div class="logo"><a href="index.html" style="color: #ffd180;">Valentine Week</a></div>
             </nav>
         </header>
 
         <main>
-            <div class="wait-card glass-effect">
-                <div class="wait-icon">🍫</div>
-                <h1 class="wait-title">Chocolate Day</h1>
-                <p class="wait-message">Wait for the day my love</p>
-                <a href="index.html" class="btn primary-btn">Back to Home</a>
+            <div class="card glass-effect chocolate-card">
+                <h1 class="fade-in title-font">Happy Chocolate Day</h1>
+
+                <div class="visual-container fade-in delay-1">
+                    <div class="chocolate-visual">
+                        <!-- Custom Chocolate SVG -->
+                        <svg class="choco-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <filter id="choco-glow" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feGaussianBlur stdDeviation="3" result="blur" />
+                                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                </filter>
+                                <linearGradient id="gold-shine" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#fff59d" />
+                                    <stop offset="50%" stop-color="#ffd54f" />
+                                    <stop offset="100%" stop-color="#ffb300" />
+                                </linearGradient>
+                            </defs>
+
+                            <!-- Wrapper/Foil Back -->
+                            <path class="choco-wrapper"
+                                d="M30,130 Q30,160 60,170 L140,170 Q170,160 170,130 L170,100 L30,100 Z"
+                                fill="#ffd180" />
+
+                            <!-- Chocolate Bar Main Body -->
+                            <rect class="choco-bar" x="40" y="40" width="120" height="100" rx="5" fill="#5d4037" />
+
+                            <!-- Chocolate Squares -->
+                            <!-- Top Row -->
+                            <rect class="choco-bar-top" x="45" y="45" width="50" height="40" rx="2" fill="#795548" />
+                            <rect class="choco-bar-top" x="105" y="45" width="50" height="40" rx="2" fill="#795548" />
+
+                            <!-- Middle Row (partially covered) -->
+                            <rect class="choco-bar-top" x="45" y="90" width="50" height="40" rx="2" fill="#795548" />
+                            <rect class="choco-bar-top" x="105" y="90" width="50" height="40" rx="2" fill="#795548" />
+
+                            <!-- Wrapper/Foil Front (Torn effect) -->
+                            <path class="choco-wrapper"
+                                d="M25,120 L175,120 L175,140 Q175,175 140,175 L60,175 Q25,175 25,140 Z"
+                                fill="url(#gold-shine)" filter="drop-shadow(0 -2px 3px rgba(0,0,0,0.2))" />
+                            <path class="choco-wrapper"
+                                d="M25,120 L40,130 L55,115 L70,125 L90,110 L110,125 L130,115 L145,130 L160,118 L175,120 V140 H25 Z"
+                                fill="#ffd54f" />
+
+                            <!-- Drip Decoration -->
+                            <path class="choco-drip" d="M45,45 Q55,60 65,45 T85,45 T95,45" stroke="#4e342e"
+                                stroke-width="3" fill="none" opacity="0.5" />
+
+                        </svg>
+                    </div>
+                </div>
+
+                <p class="quote fade-in delay-2">"Chocolate melts in the warmth,<br>
+                    I melt when you smile at me.<br>
+                    Seems like a fair trade,<br>
+                    Don’t you think? 😉"</p>
+
+                <div class="nav-buttons fade-in delay-3">
+                    <a href="index.html" class="btn secondary-btn">Home</a>
+                    <a href="teddy-day.html" class="btn primary-btn">Next: Teddy Day &rarr;</a>
+                </div>
             </div>
         </main>
 
         <footer>
-            <p>Made with &hearts; for you</p>
+            <p style="color: rgba(255,255,255,0.7);">Made with &hearts; for Mehezabin</p>
         </footer>
     </div>
 </body>

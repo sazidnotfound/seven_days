@@ -11,7 +11,17 @@
         rel="stylesheet">
 </head>
 
-<body class="wait-theme">
+<body class="propose-theme">
+    <div class="propose-flower-field" aria-hidden="true">
+        <div class="flower f1"></div>
+        <div class="flower f2"></div>
+        <div class="flower f3"></div>
+        <div class="flower f4"></div>
+        <div class="flower f5"></div>
+        <div class="flower f6"></div>
+        <div class="flower f7"></div>
+        <div class="flower f8"></div>
+    </div>
     <div class="container">
         <header>
             <nav>
@@ -20,16 +30,39 @@
         </header>
 
         <main>
-            <div class="wait-card glass-effect">
-                <div class="wait-icon">💍</div>
-                <h1 class="wait-title">Propose Day</h1>
-                <p class="wait-message">Wait for the day my love</p>
-                <a href="index.html" class="btn primary-btn">Back to Home</a>
+            <div class="card glass-effect propose-card">
+                <div class="propose-icon">💍</div>
+                <h1 class="propose-title">Propose Day</h1>
+                <p class="propose-subtitle">A tiny question with a forever answer.</p>
+
+                <div class="propose-interaction">
+                    <input type="radio" name="answer" id="answer-yes" class="answer-toggle">
+                    <input type="radio" name="answer" id="answer-no" class="answer-toggle">
+
+                    <div class="propose-buttons">
+                        <label for="answer-yes" class="btn primary-btn propose-btn">Yes</label>
+                        <label for="answer-no" class="btn secondary-btn propose-btn no-btn">No</label>
+                    </div>
+
+                    <div class="propose-message">
+                        <p class="msg msg-default">What do you say, my love will you be my valentine ?</p>
+                        <p class="msg msg-yes">You said <strong>yes</strong> — you’re my Valentine today and always. ❤️</p>
+                        <p class="msg msg-no">Try again, my love. You know the right answer. 😉</p>
+                    </div>
+
+                    <div class="propose-image">
+                        <img src="for her.jpg" alt="A handwritten love note with petals">
+                    </div>
+                </div>
+
+                <div class="propose-home-link">
+                    <a href="index.html" class="btn secondary-btn">Back to Home</a>
+                </div>
             </div>
         </main>
 
         <footer>
-            <p>Made with &hearts; for you</p>
+            <p>Made with &hearts; for Mehezabin</p>
         </footer>
     </div>
 </body>

@@ -42,8 +42,15 @@ body {
 }
 
 @keyframes bgShift {
-    0% { opacity: 0.7; transform: scale(1); }
-    100% { opacity: 1; transform: scale(1.05); }
+    0% {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
 }
 
 /* Floating Hearts Background Animation */
@@ -251,8 +258,15 @@ footer {
 }
 
 @keyframes borderGlow {
-    0%, 100% { opacity: 0; }
-    50% { opacity: 1; }
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
 }
 
 .header-subtitle {
@@ -276,6 +290,7 @@ footer {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -295,13 +310,33 @@ footer {
     animation: cardReveal 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
-.home-day-card:nth-child(1) { animation-delay: 1.1s; }
-.home-day-card:nth-child(2) { animation-delay: 1.25s; }
-.home-day-card:nth-child(3) { animation-delay: 1.4s; }
-.home-day-card:nth-child(4) { animation-delay: 1.55s; }
-.home-day-card:nth-child(5) { animation-delay: 1.7s; }
-.home-day-card:nth-child(6) { animation-delay: 1.85s; }
-.home-day-card:nth-child(7) { animation-delay: 2s; }
+.home-day-card:nth-child(1) {
+    animation-delay: 1.1s;
+}
+
+.home-day-card:nth-child(2) {
+    animation-delay: 1.25s;
+}
+
+.home-day-card:nth-child(3) {
+    animation-delay: 1.4s;
+}
+
+.home-day-card:nth-child(4) {
+    animation-delay: 1.55s;
+}
+
+.home-day-card:nth-child(5) {
+    animation-delay: 1.7s;
+}
+
+.home-day-card:nth-child(6) {
+    animation-delay: 1.85s;
+}
+
+.home-day-card:nth-child(7) {
+    animation-delay: 2s;
+}
 
 @keyframes cardReveal {
     to {
@@ -329,11 +364,21 @@ footer {
 }
 
 @keyframes heartPulse {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.2); opacity: 0.9; }
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.9;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     .background-animation,
     .heart-pulse,
     .home-logo,
@@ -344,6 +389,7 @@ footer {
     .home-footer {
         animation: none !important;
     }
+
     .home-logo,
     .home-header-card,
     .header-subtitle,
@@ -388,8 +434,15 @@ footer {
 }
 
 @keyframes waitIconFloat {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
 }
 
 .wait-title {
@@ -418,9 +471,284 @@ footer {
         padding: 2rem 1.5rem;
         margin: 0 1rem;
     }
-    .wait-icon { font-size: 3.5rem; }
-    .wait-title { font-size: 2.25rem; }
-    .wait-message { font-size: 1.15rem; }
+
+    .wait-icon {
+        font-size: 3.5rem;
+    }
+
+    .wait-title {
+        font-size: 2.25rem;
+    }
+
+    .wait-message {
+        font-size: 1.15rem;
+    }
+}
+
+/* Propose Day */
+.propose-theme {
+    background: radial-gradient(circle at top left, #ffe5f0, transparent 45%),
+        radial-gradient(circle at bottom right, #ffe0f7, transparent 45%),
+        linear-gradient(145deg, #fff5f8 0%, #ffe6f0 45%, #ffd6e8 100%);
+    min-height: 100vh;
+}
+
+.propose-theme .container {
+    position: relative;
+    z-index: 1;
+}
+
+.propose-flower-field {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.flower {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #fff5fb 0%, #ffb3c6 35%, #f06595 70%, #d6336c 100%);
+    opacity: 0.45;
+    box-shadow: 0 0 20px rgba(214, 51, 108, 0.35);
+    animation: flowerFloat 14s linear infinite;
+}
+
+.flower::before,
+.flower::after {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #fff0f6 0%, #ff8fa3 50%, #e03162 100%);
+    opacity: 0.9;
+}
+
+.flower::after {
+    transform: rotate(45deg);
+}
+
+.flower.f1 {
+    top: 80%;
+    left: 5%;
+    animation-duration: 16s;
+    transform: scale(0.9);
+}
+
+.flower.f2 {
+    top: 90%;
+    left: 25%;
+    animation-duration: 18s;
+    transform: scale(0.8);
+}
+
+.flower.f3 {
+    top: 85%;
+    left: 45%;
+    animation-duration: 15s;
+    transform: scale(1);
+}
+
+.flower.f4 {
+    top: 92%;
+    left: 65%;
+    animation-duration: 17s;
+    transform: scale(0.95);
+}
+
+.flower.f5 {
+    top: 88%;
+    left: 85%;
+    animation-duration: 19s;
+    transform: scale(0.85);
+}
+
+.flower.f6 {
+    top: 70%;
+    left: 15%;
+    animation-duration: 20s;
+    transform: scale(0.7);
+}
+
+.flower.f7 {
+    top: 72%;
+    left: 55%;
+    animation-duration: 21s;
+    transform: scale(0.75);
+}
+
+.flower.f8 {
+    top: 68%;
+    left: 90%;
+    animation-duration: 22s;
+    transform: scale(0.7);
+}
+
+@keyframes flowerFloat {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.5;
+    }
+
+    60% {
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translateY(-40vh) scale(1.05);
+        opacity: 0;
+    }
+}
+
+.propose-card {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 3.25rem 3rem;
+    text-align: center;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.35));
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 22px 55px rgba(214, 51, 108, 0.18);
+}
+
+.propose-icon {
+    font-size: 3rem;
+    margin-bottom: 0.75rem;
+    filter: drop-shadow(0 6px 18px rgba(157, 46, 83, 0.35));
+    animation: float 4s ease-in-out infinite;
+}
+
+.propose-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.25rem;
+    color: #b91c5c;
+    margin-bottom: 0.25rem;
+}
+
+.propose-subtitle {
+    font-size: 1.05rem;
+    color: #7a3650;
+    margin-bottom: 2.25rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.propose-interaction {
+    margin-bottom: 2.25rem;
+}
+
+.answer-toggle {
+    display: none;
+}
+
+.propose-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.propose-btn {
+    min-width: 120px;
+    cursor: pointer;
+}
+
+.no-btn {
+    position: relative;
+}
+
+.propose-message {
+    min-height: 3.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.propose-message .msg {
+    display: none;
+    font-size: 1.1rem;
+}
+
+.propose-message .msg-default {
+    display: block;
+    color: #6a1b4d;
+}
+
+.propose-message .msg-yes {
+    color: #7a1f4a;
+}
+
+.propose-message .msg-no {
+    color: #b91c5c;
+}
+
+.propose-home-link {
+    margin-top: 0.5rem;
+}
+
+.propose-image {
+    display: none;
+    margin-top: 1.75rem;
+}
+
+.propose-image img {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    box-shadow: 0 14px 35px rgba(214, 51, 108, 0.28);
+}
+
+/* Toggle messages based on answer */
+.propose-interaction #answer-yes:checked~.propose-message .msg-default,
+.propose-interaction #answer-no:checked~.propose-message .msg-default {
+    display: none;
+}
+
+.propose-interaction #answer-yes:checked~.propose-message .msg-yes {
+    display: block;
+}
+
+.propose-interaction #answer-no:checked~.propose-message .msg-no {
+    display: block;
+}
+
+.propose-interaction #answer-yes:checked~.propose-image {
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .propose-card {
+        padding: 2.5rem 1.75rem;
+    }
+
+    .propose-title {
+        font-size: 2.7rem;
+    }
+
+    .propose-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .propose-buttons {
+        flex-direction: column;
+    }
+
+    .propose-btn {
+        width: 100%;
+    }
+
+    .propose-image img {
+        max-width: 260px;
+    }
 }
 
 /* Rose Day */
@@ -444,7 +772,7 @@ footer {
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.7);
     box-shadow: 0 25px 60px rgba(214, 51, 108, 0.18),
-                0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+        0 0 0 1px rgba(255, 255, 255, 0.5) inset;
 }
 
 .title-font {
@@ -452,7 +780,7 @@ footer {
     font-size: 3.75rem;
     color: #b91c5c;
     text-shadow: 0 2px 20px rgba(255, 255, 255, 0.9),
-                 0 1px 3px rgba(157, 46, 83, 0.2);
+        0 1px 3px rgba(157, 46, 83, 0.2);
     letter-spacing: 0.02em;
 }
 
@@ -465,8 +793,7 @@ footer {
     width: 200px;
     height: 257px;
     margin: 0 auto;
-    filter: drop-shadow(0 0 40px rgba(214, 51, 108, 0.35))
-            drop-shadow(0 12px 28px rgba(139, 41, 66, 0.2));
+    filter: drop-shadow(0 0 40px rgba(214, 51, 108, 0.35)) drop-shadow(0 12px 28px rgba(139, 41, 66, 0.2));
     transition: transform 0.4s ease;
 }
 
@@ -485,8 +812,15 @@ footer {
 }
 
 @keyframes roseSway {
-    0%, 100% { transform: rotate(-1.5deg); }
-    50% { transform: rotate(1.5deg); }
+
+    0%,
+    100% {
+        transform: rotate(-1.5deg);
+    }
+
+    50% {
+        transform: rotate(1.5deg);
+    }
 }
 
 .rose-stem {
@@ -502,8 +836,15 @@ footer {
 }
 
 @keyframes leafShimmer {
-    0%, 100% { opacity: 0.9; }
-    50% { opacity: 1; }
+
+    0%,
+    100% {
+        opacity: 0.9;
+    }
+
+    50% {
+        opacity: 1;
+    }
 }
 
 .rose-petal-outer {
@@ -527,13 +868,27 @@ footer {
 }
 
 @keyframes petalBreath {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.9; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.9;
+    }
 }
 
 @keyframes centerGlow {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.88; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.88;
+    }
 }
 
 .rose-card .quote {
@@ -671,9 +1026,11 @@ footer {
         transform: scale(var(--scale, 1)) rotate(0deg) translateX(0);
         opacity: 0.65;
     }
+
     85% {
         opacity: 0.4;
     }
+
     100% {
         top: 100vh;
         transform: scale(var(--scale, 1)) rotate(720deg) translateX(80px);
@@ -789,6 +1146,7 @@ footer {
     .rose-theme .visual-container {
         margin: 1.5rem 0;
     }
+
     .rose-theme .rose-icon {
         width: 165px;
         height: 212px;
@@ -849,6 +1207,7 @@ footer {
     .rose-theme .visual-container {
         margin: 1rem 0;
     }
+
     .rose-theme .rose-icon {
         width: 140px;
         height: 180px;
@@ -892,5 +1251,268 @@ footer {
     .rose-theme .p9,
     .rose-theme .p10 {
         visibility: hidden;
+    }
+}
+
+/* Chocolate Day */
+.chocolate-theme {
+    background: radial-gradient(circle at 50% 0%, #6d4c41, #3e2723 60%, #1a1a1a 100%);
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.chocolate-theme .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Floating Chocolate Background */
+.chocolate-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.choco-piece {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #5d4037;
+    border-radius: 4px;
+    opacity: 0.6;
+    animation: chocoFloat 15s linear infinite;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.choco-piece.round {
+    border-radius: 50%;
+    background: #795548;
+}
+
+.choco-piece.heart {
+    background: transparent;
+    box-shadow: none;
+}
+
+.choco-piece.heart::before,
+.choco-piece.heart::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 24px;
+    background: #8d6e63;
+    border-radius: 15px 15px 0 0;
+    transform: rotate(-45deg);
+    top: 0;
+    left: 4px;
+}
+
+.choco-piece.heart::after {
+    transform: rotate(45deg);
+    left: 11px;
+}
+
+.choco-piece.c1 {
+    top: -10%;
+    left: 10%;
+    animation-duration: 12s;
+    transform: scale(0.8) rotate(15deg);
+}
+
+.choco-piece.c2 {
+    top: -20%;
+    left: 30%;
+    animation-duration: 15s;
+    transform: scale(1.1) rotate(-10deg);
+}
+
+.choco-piece.c3 {
+    top: -15%;
+    left: 60%;
+    animation-duration: 18s;
+    transform: scale(0.9) rotate(45deg);
+}
+
+.choco-piece.c4 {
+    top: -25%;
+    left: 80%;
+    animation-duration: 14s;
+    transform: scale(1.2) rotate(-25deg);
+}
+
+.choco-piece.c5 {
+    top: -30%;
+    left: 20%;
+    animation-duration: 16s;
+    transform: scale(0.7) rotate(30deg);
+}
+
+.choco-piece.c6 {
+    top: -12%;
+    left: 50%;
+    animation-duration: 13s;
+    transform: scale(1) rotate(60deg);
+}
+
+.choco-piece.c7 {
+    top: -40%;
+    left: 75%;
+    animation-duration: 19s;
+    transform: scale(0.85) rotate(-5deg);
+}
+
+.choco-piece.c8 {
+    top: -5%;
+    left: 90%;
+    animation-duration: 17s;
+    transform: scale(1.05) rotate(20deg);
+}
+
+@keyframes chocoFloat {
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.chocolate-card {
+    max-width: 580px;
+    padding: 3.5rem 3rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.chocolate-card .title-font {
+    color: #ffd180;
+    /* Gold text for title */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.chocolate-card .quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #efebe9;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.chocolate-card .quote::before {
+    background: linear-gradient(90deg, transparent, rgba(255, 209, 128, 0.4), transparent);
+}
+
+.chocolate-visual {
+    padding: 2rem 0;
+    animation: float 5s ease-in-out infinite;
+}
+
+/* Chocolate SVG Styling */
+.choco-svg {
+    width: 260px;
+    height: 260px;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.5));
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.choco-svg:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.choco-bar {
+    fill: #5d4037;
+    transition: fill 0.3s ease;
+}
+
+.choco-bar-top {
+    fill: #795548;
+}
+
+.choco-svg:hover .choco-bar {
+    fill: #6d4c41;
+}
+
+.choco-wrapper {
+    fill: #ffd180;
+    /* Gold wrapper */
+    opacity: 0.9;
+}
+
+.choco-drip {
+    fill: #4e342e;
+    animation: drip 3s infinite ease-in-out;
+}
+
+@keyframes drip {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(3px);
+    }
+}
+
+.chocolate-card .btn.primary-btn {
+    background: linear-gradient(45deg, #d4a017, #ffd700);
+    color: #3e2723;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 4px 15px rgba(212, 160, 23, 0.4);
+}
+
+.chocolate-card .btn.primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(212, 160, 23, 0.6);
+}
+
+.chocolate-card .btn.secondary-btn {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+}
+
+.chocolate-card .btn.secondary-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+}
+
+@media (max-width: 600px) {
+    .chocolate-card {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .chocolate-card .title-font {
+        font-size: 2.5rem;
+    }
+
+    .choco-svg {
+        width: 180px;
+        height: 180px;
     }
 }
