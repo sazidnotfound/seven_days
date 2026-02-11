@@ -68,11 +68,44 @@ body {
     }
 }
 
+/* Teddy Premium Look */
+.teddy-body {
+    fill: url(#teddyGradientBody);
+    /* Will use SVG defs or reliable CSS variable if possible, fallback to solid */
+    fill: #d2a679;
+    /* Fallback */
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+/* We will inject gradients directly via SVG in HTML usually, but here we can style the specific classes if we want simple CSS gradients (not supported on SVG elements usually without 'defs'). 
+   Instead, let's use box-shadows/filters where possible or stick to simple solid colors with shadows for depth. */
+
+.teddy-body {
+    fill: #cd853f;
+    /* Peru */
+    stroke: #8b4513;
+    stroke-width: 2px;
+}
+
+.teddy-belly {
+    fill: #deb887;
+    /* Burlywood */
+}
+
+.teddy-snout {
+    fill: #ffe4c4;
+    /* Bisque */
+}
+
+.teddy-ear-inner {
+    fill: #deb887;
+}
+
+/* Remove default animation so JS can take over */
 .teddy-wave {
-    animation: wave 1.5s ease-in-out infinite;
-    transform-origin: 65px 130px;
-    /* Pivot point around shoulder */
-    transform-box: user-space-on-use;
+    /* animation: wave 1.5s ease-in-out infinite; */
+    /* Handled by JS */
+    transform-origin: 45px 150px;
 }
 
 @keyframes bgShift {
