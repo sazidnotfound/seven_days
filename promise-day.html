@@ -11,7 +11,22 @@
         rel="stylesheet">
 </head>
 
-<body class="wait-theme">
+<body class="promise-theme">
+    <div class="promise-sparkles" aria-hidden="true">
+        <span class="spark s1"></span>
+        <span class="spark s2"></span>
+        <span class="spark s3"></span>
+        <span class="spark s4"></span>
+        <span class="spark s5"></span>
+        <span class="spark s6"></span>
+        <span class="spark s7"></span>
+        <span class="spark s8"></span>
+        <span class="spark s9"></span>
+        <span class="spark s10"></span>
+        <span class="spark s11"></span>
+        <span class="spark s12"></span>
+    </div>
+
     <div class="container">
         <header>
             <nav>
@@ -20,11 +35,104 @@
         </header>
 
         <main>
-            <div class="wait-card glass-effect">
-                <div class="wait-icon">🤝</div>
-                <h1 class="wait-title">Promise Day</h1>
-                <p class="wait-message">Wait for the day my love</p>
-                <a href="index.html" class="btn primary-btn">Back to Home</a>
+            <div class="card glass-effect promise-card">
+                <h1 class="fade-in title-font">Happy Promise Day</h1>
+
+                <div class="promise-visual fade-in delay-1" aria-hidden="true">
+                    <svg class="promise-scroll" viewBox="0 0 260 220" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="scrollPaper" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#fff7fb" />
+                                <stop offset="45%" stop-color="#ffe8f4" />
+                                <stop offset="100%" stop-color="#ffd6ec" />
+                            </linearGradient>
+                            <linearGradient id="scrollEdge" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#f7c6de" />
+                                <stop offset="50%" stop-color="#eaa3c8" />
+                                <stop offset="100%" stop-color="#f7c6de" />
+                            </linearGradient>
+                            <linearGradient id="ribbon" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#b91c5c" />
+                                <stop offset="50%" stop-color="#ff4d8d" />
+                                <stop offset="100%" stop-color="#b91c5c" />
+                            </linearGradient>
+                            <filter id="softShadow">
+                                <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#6a1b4d"
+                                    flood-opacity="0.25" />
+                            </filter>
+                        </defs>
+
+                        <g filter="url(#softShadow)">
+                            <!-- Rolled top -->
+                            <path
+                                d="M58 35 C40 35 30 50 30 68 C30 92 48 108 72 108 L210 108 C232 108 248 92 248 70 C248 52 236 38 218 38"
+                                fill="none" stroke="url(#scrollEdge)" stroke-width="18" stroke-linecap="round"
+                                opacity="0.9" />
+
+                            <!-- Paper -->
+                            <rect x="40" y="55" width="180" height="140" rx="18" fill="url(#scrollPaper)" />
+                            <rect x="40" y="55" width="180" height="140" rx="18" fill="none" stroke="url(#scrollEdge)"
+                                stroke-width="3" opacity="0.9" />
+
+                            <!-- Ribbon heart seal -->
+                            <path class="seal-heart"
+                                d="M130 150 C112 130 96 140 96 156 C96 170 110 182 130 196 C150 182 164 170 164 156 C164 140 148 130 130 150 Z"
+                                fill="url(#ribbon)" />
+
+                            <!-- Ribbon tails -->
+                            <path d="M118 182 L108 206 L130 196 Z" fill="#b91c5c" opacity="0.9" />
+                            <path d="M142 182 L152 206 L130 196 Z" fill="#b91c5c" opacity="0.9" />
+
+                            <!-- Decorative lines -->
+                            <path class="ink" d="M70 85 H190" />
+                            <path class="ink" d="M78 105 H182" />
+                            <path class="ink" d="M86 125 H174" />
+                        </g>
+                    </svg>
+                </div>
+
+                <p class="promise-quote fade-in delay-2">
+                    “I don’t promise you a perfect life…<br>
+                    I promise you a <strong>real</strong> love — patient, loyal, and always yours.”
+                </p>
+
+                <div class="promise-list">
+                    <div class="promise-item fade-in delay-3"><span class="tick">❤</span> To choose you — every day.
+                    </div>
+                    <div class="promise-item fade-in delay-4"><span class="tick">❤</span> To hold your hand in every
+                        storm.</div>
+                    <div class="promise-item fade-in delay-5"><span class="tick">❤</span> To listen, understand, and
+                        never give up.</div>
+                </div>
+
+                <div class="promise-interaction fade-in delay-3">
+                    <p class="promise-question">
+                        I promise to stand by you, respect you, and always try to make you smile.<br>
+                        Can I get one promise too? Just promise you’ll stay honest with me<br>
+                        and that we’ll always talk things out, no matter what. 🤍
+                    </p>
+
+                    <input type="checkbox" id="promise-yes" class="promise-toggle">
+
+                    <div class="promise-answer">
+                        <label for="promise-yes" class="btn primary-btn promise-btn">
+                            Yes, I promise 🤍
+                        </label>
+
+                        <p class="promise-reply promise-reply-wait">
+                            I’m waiting for your answer…
+                        </p>
+                        <p class="promise-reply promise-reply-yes">
+                            You said yes. That’s our forever promise now — no matter what, we talk, we stay, we choose
+                            each other. 🤍
+                        </p>
+                    </div>
+                </div>
+
+                <div class="nav-buttons fade-in delay-3">
+                    <a href="teddy-day.html" class="btn secondary-btn">← Back: Teddy Day</a>
+                    <a href="hug-day.html" class="btn primary-btn">Next: Hug Day →</a>
+                </div>
             </div>
         </main>
 

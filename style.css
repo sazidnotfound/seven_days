@@ -1137,6 +1137,15 @@ footer {
     animation-delay: 0.6s;
 }
 
+.delay-4 {
+    animation-delay: 0.8s;
+}
+
+.delay-5 {
+    animation-delay: 1.0s;
+}
+
+
 @keyframes fadeIn {
     to {
         opacity: 1;
@@ -1590,6 +1599,330 @@ footer {
     min-height: 100vh;
 }
 
+/* Promise Day */
+.promise-theme {
+    background: radial-gradient(circle at 30% 10%, rgba(255, 77, 141, 0.25), transparent 55%),
+        radial-gradient(circle at 80% 60%, rgba(185, 28, 92, 0.18), transparent 55%),
+        linear-gradient(145deg, #fff0f6 0%, #ffe0f0 45%, #ffd1ea 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.promise-theme .container {
+    position: relative;
+    z-index: 2;
+}
+
+.promise-sparkles {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.spark {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.15) 70%, transparent 100%);
+    opacity: 0;
+    animation: sparkleFloat 10s linear infinite;
+    filter: drop-shadow(0 0 8px rgba(255, 77, 141, 0.45));
+}
+
+.spark::before {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    background: radial-gradient(circle, rgba(255, 77, 141, 0.25), transparent 60%);
+    border-radius: 50%;
+}
+
+.spark.s1 {
+    left: 10%;
+    top: 110%;
+    animation-duration: 11s;
+}
+
+.spark.s2 {
+    left: 20%;
+    top: 120%;
+    animation-duration: 14s;
+    animation-delay: 1s;
+}
+
+.spark.s3 {
+    left: 35%;
+    top: 115%;
+    animation-duration: 12s;
+    animation-delay: 2s;
+}
+
+.spark.s4 {
+    left: 50%;
+    top: 130%;
+    animation-duration: 15s;
+    animation-delay: 0.5s;
+}
+
+.spark.s5 {
+    left: 65%;
+    top: 118%;
+    animation-duration: 13s;
+    animation-delay: 1.8s;
+}
+
+.spark.s6 {
+    left: 80%;
+    top: 125%;
+    animation-duration: 16s;
+    animation-delay: 0.8s;
+}
+
+.spark.s7 {
+    left: 92%;
+    top: 112%;
+    animation-duration: 12s;
+    animation-delay: 2.4s;
+}
+
+.spark.s8 {
+    left: 5%;
+    top: 128%;
+    animation-duration: 17s;
+    animation-delay: 1.2s;
+}
+
+.spark.s9 {
+    left: 42%;
+    top: 122%;
+    animation-duration: 13.5s;
+    animation-delay: 2.2s;
+}
+
+.spark.s10 {
+    left: 58%;
+    top: 135%;
+    animation-duration: 18s;
+    animation-delay: 0.2s;
+}
+
+.spark.s11 {
+    left: 73%;
+    top: 110%;
+    animation-duration: 14.5s;
+    animation-delay: 1.6s;
+}
+
+.spark.s12 {
+    left: 28%;
+    top: 138%;
+    animation-duration: 19s;
+    animation-delay: 0.9s;
+}
+
+@keyframes sparkleFloat {
+    0% {
+        transform: translateY(0) scale(0.8);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.7;
+    }
+
+    60% {
+        opacity: 0.85;
+    }
+
+    100% {
+        transform: translateY(-140vh) scale(1.25);
+        opacity: 0;
+    }
+}
+
+.promise-card {
+    max-width: 620px;
+    padding: 3.5rem 3.25rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 30px 60px rgba(106, 27, 77, 0.15),
+        inset 0 0 20px rgba(255, 255, 255, 0.5);
+    border-radius: 40px;
+}
+
+.promise-visual {
+    margin: 1.5rem auto 0.5rem;
+}
+
+.promise-scroll {
+    width: 280px;
+    height: auto;
+    animation: float 5s ease-in-out infinite;
+}
+
+.promise-scroll .ink {
+    stroke: rgba(106, 27, 77, 0.35);
+    stroke-width: 5;
+    stroke-linecap: round;
+}
+
+.promise-scroll .seal-heart {
+    animation: sealBeat 1.9s ease-in-out infinite;
+    transform-origin: 130px 170px;
+}
+
+@keyframes sealBeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.07);
+    }
+}
+
+.promise-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #880e4f;
+    margin: 2rem auto 2.5rem;
+    max-width: 34em;
+    font-style: italic;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.promise-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin: 0 auto 3rem;
+    max-width: 34rem;
+    text-align: left;
+    padding: 0 1rem;
+}
+
+.promise-item {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    padding: 0.5rem 0;
+    color: #7a1f4a;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.promise-item .tick {
+    color: #b91c5c;
+    filter: drop-shadow(0 4px 10px rgba(185, 28, 92, 0.25));
+    margin-top: 0.05rem;
+    transition: transform 0.3s ease;
+}
+
+.promise-item:hover .tick {
+    animation: heartPulse 1.2s infinite;
+}
+
+
+.promise-interaction {
+    margin: 0 auto 2.25rem;
+    max-width: 32rem;
+}
+
+.promise-question {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #7a1f4a;
+    font-weight: 500;
+    margin-bottom: 2.5rem;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.promise-toggle {
+    display: none;
+}
+
+.promise-answer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.promise-btn {
+    min-width: 190px;
+    cursor: pointer;
+}
+
+.promise-reply {
+    font-size: 0.98rem;
+    color: #7a3650;
+}
+
+.promise-reply-yes {
+    display: none;
+    font-weight: 500;
+}
+
+.promise-toggle:checked~.promise-answer .promise-reply-wait {
+    display: none;
+}
+
+.promise-toggle:checked~.promise-answer .promise-reply-yes {
+    display: block;
+}
+
+.promise-card .btn.primary-btn {
+    background: linear-gradient(45deg, #b91c5c, #ff4d8d);
+    border: none;
+    box-shadow: 0 10px 25px rgba(185, 28, 92, 0.25);
+}
+
+.promise-card .btn.primary-btn:hover {
+    background: linear-gradient(45deg, #ff4d8d, #b91c5c);
+    box-shadow: 0 14px 35px rgba(185, 28, 92, 0.35);
+}
+
+.promise-card .btn.secondary-btn {
+    border: 2px solid rgba(185, 28, 92, 0.45);
+    color: #b91c5c;
+}
+
+.promise-card .btn.secondary-btn:hover {
+    background: rgba(185, 28, 92, 0.1);
+    border-color: rgba(185, 28, 92, 0.7);
+}
+
+@media (max-width: 600px) {
+    .promise-card {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .promise-scroll {
+        width: 230px;
+    }
+
+    .promise-quote {
+        font-size: 1.15rem;
+    }
+
+    .promise-list {
+        max-width: 100%;
+    }
+}
+
 .teddy-theme .container {
     position: relative;
     z-index: 2;
@@ -1697,7 +2030,10 @@ footer {
     font-size: 1.4rem;
     font-style: italic;
     color: #880e4f;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.75rem;
+    max-width: 30em;
+    margin-left: auto;
+    margin-right: auto;
     line-height: 1.6;
 }
 
